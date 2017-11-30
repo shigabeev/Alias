@@ -1,0 +1,37 @@
+@font-face { 
+    font-family: Lobster; 
+    src: url('res/Lobster/Lobster-Regular.ttf'); 
+} 
+
+* {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+td {
+    text-align: left;
+}
+
+.delBut button, .addBut button{
+    width: 40px;
+}
+
+#Settings img {
+    width: 30px;
+    height: 30px;
+}
+
+#Settings {
+    text-align: left;
+}
+
+h1 {
+    font-size: 48pt;
+    font-family: Lobster;
+    color: turquoise;
+    text-shadow: 1px 1px 1px black;
+}
+
+#Start {
+    margin: 15px;
+}
