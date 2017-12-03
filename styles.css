@@ -105,8 +105,7 @@ a {
 /* playing */
 
 .ynbtn button{
-    
-    visibility: visible;
+    display: none;
     width: 130px;
     height: 130px;
     border-radius: 50%;
