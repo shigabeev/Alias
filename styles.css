@@ -1,7 +1,11 @@
 @font-face { 
     font-family: Lobster; 
-    src: url('res/Lobster/Lobster-Regular.ttf'); 
-} 
+    src: url("res/Fonts/Lobster-Regular.ttf"); 
+}
+
+html{
+    margin-left: -7px;
+}
 
 * {
     text-align: center;
@@ -12,8 +16,23 @@ td {
     text-align: left;
 }
 
+a {
+    text-decoration: none;
+}
+
 .delBut button, .addBut button{
-    width: 40px;
+    text-align: center;
+    color: white;
+    width: 25px;
+    height:25px;
+    border-radius: 50%;
+    background-color: #ff6369;
+    border: 1px solid#ff6369;
+}
+
+.addBut button{
+    background-color: #34c84b;
+    border: 1px solid#34c84b;
 }
 
 #Settings img {
@@ -22,16 +41,97 @@ td {
 }
 
 #Settings {
+    position: fixed;
     text-align: left;
+    top: 90%;
+    left: 10%;
 }
 
-h1 {
+#AppName {
+    
+    padding-top: 100px;
     font-size: 48pt;
     font-family: Lobster;
-    color: turquoise;
+    color: rgb(83, 199, 235);
     text-shadow: 1px 1px 1px black;
+    
 }
 
-#Start {
+.Start {
+    position: fixed;
+    color: rgb(83, 199, 235);
+    font-weight: lighter;
     margin: 15px;
+    background-color: White;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+#Teams {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#Teams h3{
+    color: rgb(83, 199, 235);
+    font-weight: lighter;
+}
+
+/* Game.html */
+
+/* waiting phase */
+
+#teamName {
+    font-weight: bold;
+}
+
+.waitStart {
+    visibility: visible;
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.teamName {
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+
+/* playing */
+
+.ynbtn button{
+    
+    visibility: visible;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    font-size: 48pt;
+    padding: 15px;
+    margin: 15px;
+    vertical-align: top;
+    background-color: white;
+    position: fixed;
+    top: 75%;
+    
+}
+
+#yesbtn {
+    border: 6px solid#34c84b;
+    color:#34c84b;
+    left: 75%;
+    right: 30%;
+    transform: translate(-50%, -50%);
+}
+
+#nobtn {
+    border: 6px solid#ff6369;
+    color: #ff6369;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
