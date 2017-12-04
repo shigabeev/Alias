@@ -2,7 +2,9 @@ var COMMANDS = ["Pes", "Kit"];
 
 function loadCommands(){
   var table = document.getElementById("commands");
-  COMMANDS.forEach(function(item, i, arr){
+  var store = new Store();
+  commands = store.getCommands();
+  commands.forEach(function(item, i, arr){
     addCommand(item);
   })
 }
@@ -19,14 +21,15 @@ function addCommand(item){
 
 function addCommandEvent(){
   var newCommand = document.getElementById("commandInput").value
-  COMMANDS.push(newCommand);
+  var store = new Store();
+  store.addCommand(newCommand);
   addCommand(newCommand);
 }
 
 function delCommandEvent(btn){
   var row = btn.parentNode.parentNode;
   var removedItem = row.getElementsByTagName("td")[0].innerHTML;
-  var i = COMMANDS.indexOf(removedItem);
-  COMMANDS.splice(i, 1)
+  var store = new Store();
+  store.removeCommand(removedItem);
   row.parentNode.removeChild(row);
 }

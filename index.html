@@ -3,6 +3,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="firstScreenActions.js"></script>
+        <script src="dataStore.js"></script>
     </head>
     <body>
         <div>
@@ -25,6 +26,8 @@
         </div>
     </body>
     <script>
+      var store = new Store();
+      store.initStore();
       loadCommands();
     </script>
 </html>
