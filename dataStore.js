@@ -20,4 +20,27 @@ class Store{
     commands.push(item)
     window.localStorage.setItem('commands', JSON.stringify(commands));
   }
+
+  nextCommand(){
+    var commands = JSON.parse(window.localStorage.getItem('commands'));
+    var index = JSON.parse(window.localStorage.getItem('currentCommandIndex'));
+    if (index === null){
+      index = 0;
+    }
+    index += 1
+    if (index > commands.length - 1){
+      index = 0;
+    }
+    window.localStorage.setItem('currentCommandIndex', JSON.stringify(index));
+  }
+
+  getCurrentCommand(){
+    var commands = JSON.parse(window.localStorage.getItem('commands'));
+    var index = JSON.parse(window.localStorage.getItem('currentCommandIndex'));
+    if (index === null){
+      index = 0;
+      window.localStorage.setItem('currentCommandIndex', JSON.stringify(index));
+    }
+    return commands[index];
+  }
 }
