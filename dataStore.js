@@ -1,6 +1,17 @@
 class Store{
   initStore(){
     window.localStorage.setItem('teams', JSON.stringify(["Pes", "Kit"]));
+    var settings = {
+      "timer": "0:30"
+    };
+    window.localStorage.setItem('settings', JSON.stringify(settings));
+    var words = [
+      "Рот",
+      "Нос",
+      "Спина",
+      "Вуркендындль"
+    ];
+    window.localStorage.setItem('words', JSON.stringify(words));
   }
 
   getTeams(){
@@ -42,5 +53,36 @@ class Store{
       window.localStorage.setItem('currentTeamIndex', JSON.stringify(index));
     }
     return commands[index];
+  }
+
+  getSettings(){
+    return JSON.parse(window.localStorage.getItem('settings'));
+  }
+
+  setSettings(settings){
+      window.localStorage.setItem('settings', JSON.stringify(settings));
+  }
+
+  nextWord(){
+    var words = JSON.parse(window.localStorage.getItem('words'));
+    var index = JSON.parse(window.localStorage.getItem('currentWordIndex'));
+    if (index === null){
+      index = 0;
+    }
+    index += 1
+    if (index > words.length - 1){
+      index = 0;
+    }
+    window.localStorage.setItem('currentWordIndex', JSON.stringify(index));
+  }
+
+  getCurrentWord(){
+    var words = JSON.parse(window.localStorage.getItem('words'));
+    var index = JSON.parse(window.localStorage.getItem('currentWordIndex'));
+    if (index === null){
+      index = 0;
+      window.localStorage.setItem('currentWordIndex', JSON.stringify(index));
+    }
+    return words[index];
   }
 }
