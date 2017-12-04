@@ -1,35 +1,35 @@
 var COMMANDS = ["Pes", "Kit"];
 
-function loadCommands(){
+function loadTeams(){
   var table = document.getElementById("commands");
   var store = new Store();
-  commands = store.getCommands();
+  commands = store.getTeams();
   commands.forEach(function(item, i, arr){
-    addCommand(item);
+    addTeam(item);
   })
 }
 
-function addCommand(item){
+function addTeam(item){
   var table = document.getElementById("commands");
   var row = table.insertRow(0);
   var cell1 = row.insertCell(0)
   var cell2 = row.insertCell(1)
   cell1.innerHTML = item;
   cell2.classList.add("delBut");
-  cell2.innerHTML = "<button onclick=\"delCommandEvent(this)\">—</button>"
+  cell2.innerHTML = "<button onclick=\"delTeamEvent(this)\">—</button>"
 }
 
-function addCommandEvent(){
-  var newCommand = document.getElementById("commandInput").value
+function addTeamEvent(){
+  var newTeam = document.getElementById("commandInput").value
   var store = new Store();
-  store.addCommand(newCommand);
-  addCommand(newCommand);
+  store.addTeam(newTeam);
+  addTeam(newTeam);
 }
 
-function delCommandEvent(btn){
+function delTeamEvent(btn){
   var row = btn.parentNode.parentNode;
   var removedItem = row.getElementsByTagName("td")[0].innerHTML;
   var store = new Store();
-  store.removeCommand(removedItem);
+  store.removeTeam(removedItem);
   row.parentNode.removeChild(row);
 }

@@ -1,29 +1,29 @@
 class Store{
   initStore(){
-    window.localStorage.setItem('commands', JSON.stringify(["Pes", "Kit"]));
+    window.localStorage.setItem('teams', JSON.stringify(["Pes", "Kit"]));
   }
 
-  getCommands(){
-    var commands = JSON.parse(window.localStorage.getItem('commands'));
+  getTeams(){
+    var commands = JSON.parse(window.localStorage.getItem('teams'));
     return commands;
   }
 
-  removeCommand(item){
-    var commands = JSON.parse(window.localStorage.getItem('commands'));
+  removeTeam(item){
+    var commands = JSON.parse(window.localStorage.getItem('teams'));
     var i = commands.indexOf(item);
     commands.splice(i, 1);
-    window.localStorage.setItem('commands', JSON.stringify(commands));
+    window.localStorage.setItem('teams', JSON.stringify(commands));
   }
 
-  addCommand(item){
-    var commands = JSON.parse(window.localStorage.getItem('commands'));
+  addTeam(item){
+    var commands = JSON.parse(window.localStorage.getItem('teams'));
     commands.push(item)
-    window.localStorage.setItem('commands', JSON.stringify(commands));
+    window.localStorage.setItem('teams', JSON.stringify(commands));
   }
 
-  nextCommand(){
-    var commands = JSON.parse(window.localStorage.getItem('commands'));
-    var index = JSON.parse(window.localStorage.getItem('currentCommandIndex'));
+  nextTeam(){
+    var commands = JSON.parse(window.localStorage.getItem('teams'));
+    var index = JSON.parse(window.localStorage.getItem('currentTeamIndex'));
     if (index === null){
       index = 0;
     }
@@ -31,15 +31,15 @@ class Store{
     if (index > commands.length - 1){
       index = 0;
     }
-    window.localStorage.setItem('currentCommandIndex', JSON.stringify(index));
+    window.localStorage.setItem('currentTeamIndex', JSON.stringify(index));
   }
 
-  getCurrentCommand(){
-    var commands = JSON.parse(window.localStorage.getItem('commands'));
-    var index = JSON.parse(window.localStorage.getItem('currentCommandIndex'));
+  getCurrentTeam(){
+    var commands = JSON.parse(window.localStorage.getItem('teams'));
+    var index = JSON.parse(window.localStorage.getItem('currentTeamIndex'));
     if (index === null){
       index = 0;
-      window.localStorage.setItem('currentCommandIndex', JSON.stringify(index));
+      window.localStorage.setItem('currentTeamIndex', JSON.stringify(index));
     }
     return commands[index];
   }
