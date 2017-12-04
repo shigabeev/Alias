@@ -3,6 +3,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="firstScreenActions.js"></script>
+        <script src="dataStore.js"></script>
     </head>
     <body>
         <div>
@@ -13,7 +14,7 @@
             <table align="center" id="commands">
                 <tr>
                     <td><input id="commandInput"type="text" size="40"></td>
-                    <td class="AddBut" onclick="addCommand()"><button>+</button></td>
+                    <td class="AddBut" onclick="addTeamEvent()"><button>+</button></td>
                 </tr>
             </table>
         </div>
@@ -25,6 +26,8 @@
         </div>
     </body>
     <script>
-      loadCommands();
+      var store = new Store();
+      store.initStore();
+      loadTeams();
     </script>
 </html>

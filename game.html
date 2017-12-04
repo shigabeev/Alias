@@ -2,29 +2,34 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="dataStore.js"></script>
+    <script src="gameActions.js"></script>
 </head>
 <body>
     <div class = "timer">
         <div class="loader"></div>
-        <h3 id=timer>0:30</h3>
+        <h3 id="timer"></h3>
     </div>
-    <div id="word">
-        <h1>Рот</h1>
+    <div>
+        <h1 id="word"></h1>
     </div>
-    <div class="waitStart"> 
+    <div class="waitStart">
         <h2 class="Start" onclick="StartGame()">Начать раунд</h2>
         <div class="teamName">
-            <p>Играет команда <span id="teamName">Пёс</span></p>
+            <p>Играет команда <span id="teamName"></span></p>
         </div>
     </div>
     <div class="ynbtn">
-        <button id="yesbtn">
+        <button id="yesbtn" onclick="rightWord()">
             ✓
         </button>
-        <button id="nobtn">
+        <button id="nobtn" onclick="wrongWord()">
             ×
         </button>
     </div>
 </body>
+<script>
+  loadGame();
+</script>
 <script src="dynamics.js"></script>
 </html>
