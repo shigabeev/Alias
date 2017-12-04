@@ -1,7 +1,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="styles.css"> 
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="firstScreenActions.js"></script>
     </head>
     <body>
         <div>
@@ -9,22 +10,21 @@
         </div>
         <div id="Teams">
             <h3>Команды:</h3>
-            <table align="center">
+            <table align="center" id="commands">
                 <tr>
-                    <td>Пёс</td>
-                    <td class="delBut"><button>—</button></td>
-                </tr>
-                <tr>
-                    <td><input type="text" size="40"></td>
-                    <td class="AddBut"><button>+</button></td>
+                    <td><input id="commandInput"type="text" size="40"></td>
+                    <td class="AddBut" onclick="addCommand()"><button>+</button></td>
                 </tr>
             </table>
         </div>
-        <div> 
+        <div>
             <a href="game.html"><h2 class="Start">Начать игру</h2></a>
         </div>
         <div id="Settings">
-            <img src="res/Settings.ico">        
+            <img src="res/Settings.ico">
         </div>
     </body>
+    <script>
+      loadCommands();
+    </script>
 </html>

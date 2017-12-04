@@ -5,7 +5,7 @@ var duration = 30;
 document.getElementById('timer').innerHTML = 0 + ":" + duration;
 
 // Actions on pressing Start game
-function StartGame() {   
+function StartGame() {
     // Make anser buttons visible
     document.getElementById("yesbtn").style.display = "inline";
     document.getElementById("nobtn").style.display = "inline";
@@ -20,7 +20,7 @@ function StartGame() {
 }
 
 // Actions when timer is over
-function gameOver() {   
+function gameOver() {
     return;
 }
 
