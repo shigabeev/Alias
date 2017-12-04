@@ -1,12 +1,9 @@
-// Settings
-var duration = 30;
-
 // Actions on load
-document.getElementById('timer').innerHTML = 0 + ":" + duration;
+document.getElementById('timer').innerHTML = 0 + ":" + Store.settings.timer;
 
 // Actions on pressing Start game
 function StartGame() {
-    // Make anser buttons visible
+    // Make answer buttons visible
     document.getElementById("yesbtn").style.display = "inline";
     document.getElementById("nobtn").style.display = "inline";
 
@@ -69,10 +66,10 @@ function loadGame(){
   }
   
   function rightWord(){
-  
+    
   }
   
   function wrongWord(){
-  
+    
   }
   
