@@ -1,0 +1,33 @@
+@font-face { 
+    font-family: Lobster; 
+    src: url("res/Fonts/Lobster-Regular.ttf"); 
+}
+
+html{
+    margin-left: -7px;
+}
+
+* {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+td {
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Start {
+    position: fixed;
+    color: rgb(83, 199, 235);
+    font-weight: lighter;
+    margin: 15px;
+    background-color: White;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

@@ -1,0 +1,49 @@
+
+.delBut button, .addBut button{
+    text-align: center;
+    color: white;
+    width: 25px;
+    height:25px;
+    border-radius: 50%;
+    background-color: #ff6369;
+    border: 1px solid#ff6369;
+}
+
+.addBut button{
+    background-color: #34c84b;
+    border: 1px solid#34c84b;
+}
+
+#Settings img {
+    width: 30px;
+    height: 30px;
+}
+
+#Settings {
+    position: fixed;
+    text-align: left;
+    top: 90%;
+    left: 10%;
+}
+
+#AppName {
+    
+    padding-top: 100px;
+    font-size: 48pt;
+    font-family: Lobster;
+    color: rgb(83, 199, 235);
+    text-shadow: 1px 1px 1px black;
+    
+}
+
+#Teams {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#Teams h3{
+    color: rgb(83, 199, 235);
+    font-weight: lighter;
+}

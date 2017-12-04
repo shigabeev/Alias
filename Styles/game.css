@@ -1,0 +1,51 @@
+/* waiting */
+
+#teamName {
+    font-weight: bold;
+}
+
+.waitStart {
+    visibility: visible;
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.teamName {
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+
+/* playing */
+
+.ynbtn button{
+    display: none;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    font-size: 48pt;
+    padding: 15px;
+    margin: 15px;
+    vertical-align: top;
+    background-color: white;
+    position: fixed;
+    top: 75%;
+    
+}
+
+#yesbtn {
+    border: 6px solid#34c84b;
+    color:#34c84b;
+    left: 75%;
+    right: 30%;
+    transform: translate(-50%, -50%);
+}
+
+#nobtn {
+    border: 6px solid#ff6369;
+    color: #ff6369;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
