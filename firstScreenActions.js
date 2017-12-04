@@ -1,40 +1,29 @@
 var COMMANDS = ["Pes", "Kit"];
 
 function loadCommands(){
-  // <tr>
-  //     <td>Пёс</td>
-  //     <td class="delBut"><button>—</button></td>
-  // </tr>
   var table = document.getElementById("commands");
   COMMANDS.forEach(function(item, i, arr){
-    var row = table.insertRow(0);
-    var cell1 = row.insertCell(0)
-    var cell2 = row.insertCell(1)
-
-    cell1.innerHTML = item;
-    cell2.classList.add("delBut");
-    cell2.innerHTML = "<button onclick=\"delCommand(this)\">—</button>"
-
+    addCommand(item);
   })
 }
 
-function addCommand(){
-  var newCommand = document.getElementById("commandInput").value
-  alert(newCommand)
-  COMMANDS.push(newCommand)
-
+function addCommand(item){
   var table = document.getElementById("commands");
-  row = table.insertRow(0);
+  var row = table.insertRow(0);
   var cell1 = row.insertCell(0)
   var cell2 = row.insertCell(1)
-
-  cell1.innerHTML = newCommand;
+  cell1.innerHTML = item;
   cell2.classList.add("delBut");
-  cell2.innerHTML = "<button onclick=\"delCommand(this)\">—</button>"
-
+  cell2.innerHTML = "<button onclick=\"delCommandEvent(this)\">—</button>"
 }
 
-function delCommand(btn){
+function addCommandEvent(){
+  var newCommand = document.getElementById("commandInput").value
+  COMMANDS.push(newCommand);
+  addCommand(newCommand);
+}
+
+function delCommandEvent(btn){
   var row = btn.parentNode.parentNode;
   var removedItem = row.getElementsByTagName("td")[0].innerHTML;
   var i = COMMANDS.indexOf(removedItem);
