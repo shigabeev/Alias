@@ -4,6 +4,15 @@
     font-weight: bold;
 }
 
+.timer div{
+    padding-top: 5%;
+}
+
+#word {
+    padding-top: 10%;
+    font-size: 48px;
+}
+
 .waitStart {
     visibility: visible;
     position: fixed;
