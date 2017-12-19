@@ -8,15 +8,12 @@
 </head>
 <body>
     <h2 id=wordCount>11</h2>
-    <table class = "words" align=center>
-        <tr>
-            <td class="word">Солнце</td>
-            <td class="check">✓</td>
-        </tr>
-        <tr>
-            <td class="word">пляж</td>
-            <td class="check">×</td>
-        </tr>
+    <table id="results" class = "words" align=center>
     </table>
 </body>
+<script>
+  var store = new Store();
+  alert(JSON.stringify(store.getWordResult()))
+  loadResults()
+</script>
 </html>
