@@ -2,7 +2,7 @@ class Store{
   initStore(){
     window.localStorage.setItem('teams', JSON.stringify(["Pes", "Kit"]));
     var settings = {
-      "timer": "0:30"
+      "timer": "0:10"
     };
     window.localStorage.setItem('settings', JSON.stringify(settings));
     var words = [
@@ -84,5 +84,27 @@ class Store{
       window.localStorage.setItem('currentWordIndex', JSON.stringify(index));
     }
     return words[index];
+  }
+
+  // results: {
+  //   "team1": {
+  //     "word1": true;
+  //     "word2": false;
+  //   }
+  //   "team2": {
+  //     "word3": flase;
+  //   }
+  // }
+  addWordResult(team, word, succsess){
+    var results = JSON.parse(window.localStorage.getItem('results'));
+    results = results || {};
+    results[team] = results[team] || {};
+
+    results[team][word] = succsess;
+    window.localStorage.setItem('results', JSON.stringify(results));
+  }
+
+  getWordResult(){
+    return JSON.parse(window.localStorage.getItem('results'));
   }
 }

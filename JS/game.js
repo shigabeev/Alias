@@ -1,5 +1,5 @@
 // Actions on load
-document.getElementById('timer').innerHTML = 0 + ":" + Store.settings.timer;
+// document.getElementById('timer').innerHTML = 0 + ":" + Store.settings.timer;
 
 // Actions on pressing Start game
 function StartGame() {
@@ -45,19 +45,18 @@ function checkSecond(sec) {
 
 function loadGame(){
     var store = new Store();
-  
+
     var span = document.getElementById("teamName")
     command = store.getCurrentTeam();
     span.innerHTML = command;
-  
+
     var timer = document.getElementById("timer");
     settings = store.getSettings();
     timer.innerHTML = settings.timer;
-  
-    var word = document.getElementById("word");
-    word.innerHTML = store.getCurrentWord();
+
+    nextWord();
   }
-  
+
   function nextGame(){
     var store = new Store();
     store.nextTeam();
@@ -65,12 +64,28 @@ function loadGame(){
     var span = document.getElementById("teamName")
     span.innerHTML = command;
   }
-  
+
+  function nextWord(){
+    var store = new Store();
+
+    var word = document.getElementById("word");
+    word.innerHTML = store.getCurrentWord();
+
+    store.nextWord();
+  }
+
   function rightWord(){
-    
+    var store = new Store();
+    var team = store.getCurrentTeam();
+    var word = store.getCurrentWord();
+    store.addWordResult(team, word, true)
+    nextWord();
   }
-  
+
   function wrongWord(){
-    
+    var store = new Store();
+    var team = store.getCurrentTeam();
+    var word = store.getCurrentWord();
+    store.addWordResult(team, word, false);
+    nextWord();
   }
-  
