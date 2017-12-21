@@ -14,6 +14,8 @@ function StartGame() {
     }
 
     startTimer();    // nuff said
+    var store = new Store()
+    store.nextTeam()
 }
 
 // Actions when timer is over

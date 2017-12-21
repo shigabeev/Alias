@@ -4,10 +4,11 @@ function loadResults(){
 
   var results = store.getWordResult();
   var commonSum = 0;
-  Object.keys(results).forEach(function (team, _, _){
-
+  curr_team = store.getCurrentTeam()
+  
+  var f = function (team, _, _){
     var sum = 0;
-    Object.keys(results[team]).forEach(function (word, _, _){
+    Object.keys(results[curr_team]).forEach(function (word, _, _){
 
         var subrow = table.insertRow(0);
         var cellWord = subrow.insertCell(0);
@@ -27,9 +28,26 @@ function loadResults(){
       var cellTeam = row.insertCell(0);
       cellTeam.innerHTML = team;
 
-  })
+  }
+  f(curr_team);
+
+  var finished = store.getTeams().length == Object.keys(results).length
 
   var word_count = document.getElementById("wordCount");
   word_count.innerHTML = commonSum;
 
+  if (!finished){
+    document.getElementById("nextRound").style.visibility = "visible"
+    document.getElementById("finals").style.visibility = "hidden"
+  }
+  else{
+    document.getElementById("finals").style.visibility = "visible"
+    document.getElementById("nextRound").style.visibility = "hidden"
+  }
+}
+
+function nextRound(){
+  window.location.href = "game.html";
+  var store = Store()
+  store.nextTeam()
 }

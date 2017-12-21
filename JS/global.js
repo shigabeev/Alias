@@ -113,4 +113,8 @@ class Store{
   getWordResult(){
     return JSON.parse(window.localStorage.getItem('results'));
   }
+
+  NewGame(){
+
+  }
 }
