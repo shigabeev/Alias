@@ -31,18 +31,18 @@ function loadResults(){
   }
   f(curr_team);
 
-  var finished = store.getTeams().length == Object.keys(results).length
+  var finished = store.getTeams().length == Object.keys(results).length;
 
   var word_count = document.getElementById("wordCount");
   word_count.innerHTML = commonSum;
 
   if (!finished){
-    document.getElementById("nextRound").style.visibility = "visible"
-    document.getElementById("finals").style.visibility = "hidden"
+    document.getElementById("nextRound").style.visibility = "visible";
+    document.getElementById("finals").style.visibility = "hidden";
   }
   else{
-    document.getElementById("finals").style.visibility = "visible"
-    document.getElementById("nextRound").style.visibility = "hidden"
+    document.getElementById("finals").style.visibility = "visible";
+    document.getElementById("nextRound").style.visibility = "hidden";
   }
 }
 

@@ -6,10 +6,10 @@ for(var i = 0; i < rad.length; i++) {
         if(this !== prev) {
             prev = this;
         }
-        console.log(this.value)
+        console.log(this.value);
     };
 }
 
 function changeDuration (time){
-    alert("Gotcha !")
+    alert("Gotcha !");
 }
