@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/Aliasas" version="1.0.0" viewmodes="maximized">
-    <tizen:application id="jUue36kTXx.TAUMultiPage" package="jUue36kTXx" required_version="2.4"/>
-    <content src="index.html"/>
+    <tizen:application id="jUue36kTXx.Alias" package="jUue36kTXx" required_version="2.4"/>
+    <content src="welcome.html"/>
     <feature name="http://tizen.org/feature/screen.size.all"/>
-    <icon src="icon.png"/>
+    <icon src="res/icon.png"/>
     <name>Alias</name>
     <tizen:profile name="mobile"/>
     <tizen:setting context-menu="disable"/>
