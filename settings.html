@@ -9,10 +9,12 @@
 </head>
 <body>
     <h2>Время хода</h2>
-    <form name = "setDuration" action="">
+    <form name="setDuration" id="settingsForm">
         <input type="radio" name="duration" value="30"> 30 секунд<br>
         <input type="radio" name="duration" value="45"> 45 секунд<br>
         <input type="radio" name="duration" value="60"> 60 секунд
     </form>
+    <button onclick="save()">Save</button>
+    <button onclick="window.location.href = 'welcome.html';">Back</button>
 </body>
 </html>
