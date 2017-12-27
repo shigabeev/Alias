@@ -19,8 +19,8 @@ function save(){
   time = "30";
   //fund time
   for (var i=0; i<formElements.length; i++) {
-    if(formElements[i].value){
-      time = formElements[i].name;
+    if(formElements[i].checked){
+      time = formElements[i].value;
     }
   }
 
@@ -28,7 +28,6 @@ function save(){
   var settings = {
     "timer": "0:" + time
   };
-
   store.setSettings(settings)
 
   window.location.href = "welcome.html";

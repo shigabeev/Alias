@@ -1,10 +1,14 @@
 class Store{
   initStore(){
-    window.localStorage.setItem('teams', JSON.stringify(["Pes", "Kit"]));
-    var settings = {
-      "timer": "0:10"
-    };
-    window.localStorage.setItem('settings', JSON.stringify(settings));
+    if (window.localStorage.getItem('teams') === null){
+        window.localStorage.setItem('teams', JSON.stringify(["Pes", "Kit"]));
+    }
+    if (window.localStorage.getItem('settings') === null){
+      var settings = {
+        "timer": "0:10"
+      };
+      window.localStorage.setItem('settings', JSON.stringify(settings));
+    }
     var words = [
       "Рот",
       "Нос",
@@ -18,6 +22,7 @@ class Store{
       "Жернова"
     ];
     window.localStorage.setItem('words', JSON.stringify(words));
+    window.localStorage.setItem('results', JSON.stringify(null));
   }
 
   getTeams(){

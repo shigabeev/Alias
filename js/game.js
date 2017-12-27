@@ -1,8 +1,5 @@
 // Actions on load
 
-var store = Store()
-document.getElementById('timer').innerHTML = 0 + ":" + store.getSettings["timer"];
-
 // Actions on pressing Start game
 function StartGame() {
     // Make answer buttons visible
@@ -17,6 +14,7 @@ function StartGame() {
 
     startTimer();    // nuff said
     var store = new Store()
+    document.getElementById('timer').innerHTML = store.getSettings()["timer"];
     store.nextTeam()
 }
 
@@ -89,7 +87,7 @@ function loadGame(){
   function wrongWord(){
     var store = new Store();
     var team = store.getCurrentTeam();
-    var word = store.getCurrentWord();
+    var word = document.getElementById("word").innerHTML;
     store.addWordResult(team, word, false);
     nextWord();
   }
