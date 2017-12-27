@@ -1,5 +1,7 @@
 // Actions on load
-// document.getElementById('timer').innerHTML = 0 + ":" + Store.settings.timer;
+
+var store = Store()
+document.getElementById('timer').innerHTML = 0 + ":" + store.getSettings["timer"];
 
 // Actions on pressing Start game
 function StartGame() {

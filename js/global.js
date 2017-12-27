@@ -114,6 +114,10 @@ class Store{
     return JSON.parse(window.localStorage.getItem('results'));
   }
 
+  clearWordsResult(){
+    window.localStorage.setItem('results', JSON.stringify(null));
+  }
+
   NewGame(){
 
   }

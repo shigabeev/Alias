@@ -5,7 +5,7 @@ function loadResults(){
   var results = store.getWordResult();
   var commonSum = 0;
   curr_team = store.getCurrentTeam()
-  
+
   var f = function (team, _, _){
     var sum = 0;
     Object.keys(results[curr_team]).forEach(function (word, _, _){
