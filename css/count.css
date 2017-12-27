@@ -1,0 +1,21 @@
+#wordCount{
+    font-size: 28pt;
+    color: rgb(0,117,196);
+    padding-top:15%;
+}
+
+.words {
+    padding-top: 20%; 
+}
+
+.word {
+    padding-left: 0px;
+    padding-right: 40px;
+    font-size: 22pt;
+    color: rgb(0,117,196)
+}
+
+.check {
+    padding-left: 20%;
+    font-size: 28pt;
+}

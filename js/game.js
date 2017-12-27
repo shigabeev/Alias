@@ -22,7 +22,7 @@ function StartGame() {
 
 // Actions when timer is over
 function gameOver() {
-    window.location.href = "results.html";
+    window.location.href = "count.html";
     return;
 }
 
