@@ -10,16 +10,31 @@ class Store{
       window.localStorage.setItem('settings', JSON.stringify(settings));
     }
     var words = [
+      "Бассейн",
+      "Лягушка",
+      "Наклейка",
       "Рот",
       "Нос",
+      "Наклейка",
+      "Грядка",
       "Спина",
-      "Вуркендындль",
       "Крот",
       "Бот",
       "Лошадь",
-      "Спиногрыз",
-      "Твой Батя",
-      "Жернова"
+      "Жернова",
+      "Учитель",
+      "Samsung",
+      "Команда",
+      "Работа",
+      "Мышь",
+      "Мыло",
+      "Бассейн",
+      "Лягушка",
+      "Наклейка",
+      "Грядка",
+      "Наряд",
+      "Лодка",
+      "Глотка"
     ];
     window.localStorage.setItem('words', JSON.stringify(words));
     window.localStorage.setItem('results', JSON.stringify(null));
