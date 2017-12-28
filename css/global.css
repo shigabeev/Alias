@@ -20,6 +20,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .Start {
     position: fixed;
     color: rgb(83, 199, 235);
