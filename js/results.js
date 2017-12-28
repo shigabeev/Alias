@@ -18,5 +18,7 @@ function init(){
             best = team
           }
     });
+    aler(best_sum)
+    alert(best)
     winner.innerHTML = best;
 }
