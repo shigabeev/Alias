@@ -47,3 +47,23 @@
     color: rgb(83, 199, 235);
     font-weight: lighter;
 }
+
+.start-game {
+    padding-top:1.3em;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+.container-fluid {
+    padding-top: 5px;
+}
+.row {
+    padding-top: 2px;
+}
