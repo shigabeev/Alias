@@ -31,10 +31,6 @@ function loadResults(){
   }
   f(curr_team);
 
-  alert(store.getTeams())
-
-  alert(Object.keys(results))
-
   var finished = store.getTeams().length == Object.keys(results).length;
 
   var word_count = document.getElementById("wordCount");
