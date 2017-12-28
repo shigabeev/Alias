@@ -22,32 +22,34 @@
         <div class="container-fluid teams">
             
                 <div class="row item1">
-                    <div class="col-10 float-sm-left">
+                    <div class="col-10 col-md-6 offset-md-2 float-sm-left">
                         Kes
                     </div>
-                    <div class="col-2">
+                    <div class="col-2 col-md-2">
                     <button type="button" class="btn btn-danger btn-circle float-sm-right">-</button>
                     </div>
                 </div>
 
                 <div class="row item2">
-                    <div class="col-10 float-sm-left">
+                    <div class="col-10 col-md-6 offset-md-2 float-sm-left">
                         Pit
                     </div>
-                    <div class="col-2">
+                    <div class="col-2 col-md-2">
                     <button type="button" class="btn btn-danger btn-circle float-sm-right">-</button>
                     </div>
                 </div>
-       
+
+                <div class="row input">
+                     <div class="col-md-8 offset-md-2">
+                        <div class="input-group">
+                            <!-- <span class="input-group-addon" id="basic-addon1">Enter here:</span> -->
+                            <input id="commandInput" type="text" class="form-control" placeholder="Command" aria-describedby="basic-addon1">
+                            <button type="button" class="btn btn-success btn-circle float-sm-right">+</button>
+                        </div>
+                    </div>
+                </div>
         </div>
 
-        <div class="container-fluid">
-            <div class="input-group">
-              <!-- <span class="input-group-addon" id="basic-addon1">Enter here:</span> -->
-              <input id="commandInput" type="text" class="form-control" placeholder="Command" aria-describedby="basic-addon1">
-              <button type="button" class="btn btn-success btn-circle float-sm-right">+</button>
-            </div>
-        </div>
         <div class="row">
             <div class="col-12">
                 <h2 class="center start-game"><a href="game.html">Начать игру</a></h2>
@@ -74,7 +76,7 @@
         <div id="Settings">
             <a href="settings.html"><img src="res/Settings.ico"></a>
         </div>
-        
+
         <script src="js/welcome.js"></script>
         <script src="js/global.js"></script>
         <script>
