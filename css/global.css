@@ -8,6 +8,10 @@ html{
 }
 
 * {
+<<<<<<< HEAD
+=======
+    /*text-align: center;*/
+>>>>>>> 706de93ebbdd294c8c36e218fbc6384bdc1a22d3
     font-family: sans-serif;
 }
 
@@ -21,6 +25,20 @@ a {
 
 a:hover {
     text-decoration: none;
+<<<<<<< HEAD
+=======
+}
+
+.Start {
+    position: fixed;
+    color: rgb(83, 199, 235);
+    font-weight: lighter;
+    margin: 15px;
+    background-color: White;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+>>>>>>> 706de93ebbdd294c8c36e218fbc6384bdc1a22d3
 }
 
 .center {

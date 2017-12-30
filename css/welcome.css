@@ -51,7 +51,11 @@
 }
 
 .start-game {
+<<<<<<< HEAD
     padding-top:2em;
+=======
+    padding-top:1.3em;
+>>>>>>> 706de93ebbdd294c8c36e218fbc6384bdc1a22d3
 }
 
 .btn-circle {
@@ -68,8 +72,11 @@
 }
 .row {
     padding-top: 2px;
+<<<<<<< HEAD
 }
 
 #commandInput {
     margin-right: 10%;
+=======
+>>>>>>> 706de93ebbdd294c8c36e218fbc6384bdc1a22d3
 }
