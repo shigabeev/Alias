@@ -8,23 +8,32 @@
     padding-top: 5%;
 }
 
+#timer {
+ text-align: center;   
+}
+
 #word {
+    position: center;
+    text-align: center;
     padding-top: 10%;
     font-size: 48px;
 }
 
 .waitStart {
     visibility: visible;
-    position: fixed;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .teamName {
     text-align: center;
-    position: relative;
-    top: 100px;
+}
+
+.Start {
+    padding-top: 60%;
+    text-align: center;
+    color: rgb(83, 199, 235);
+    font-weight: lighter;
+    margin: 15px;
+    background-color: White;
 }
 
 /* playing */

@@ -8,7 +8,6 @@ html{
 }
 
 * {
-    text-align: center;
     font-family: sans-serif;
 }
 
@@ -20,14 +19,10 @@ a {
     text-decoration: none;
 }
 
-.Start {
-    position: fixed;
-    color: rgb(83, 199, 235);
-    font-weight: lighter;
-    margin: 15px;
-    background-color: White;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+a:hover {
+    text-decoration: none;
 }
 
+.center {
+    text-align: center;
+}

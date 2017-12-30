@@ -1,4 +1,5 @@
 #wordCount{
+    text-align: center;
     font-size: 28pt;
     color: rgb(0,117,196);
     padding-top:15%;
@@ -18,4 +19,14 @@
 .check {
     padding-left: 20%;
     font-size: 28pt;
+}
+
+.controls {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.controls a {
+    font-size: 14pt;
+    margin: 3%
 }

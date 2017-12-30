@@ -1,5 +1,16 @@
 var COMMANDS = ["Pes", "Kit"];
 
+var fdoc = $(document);
+
+fdoc.ready(function () { 
+
+$("#categories").click(function () { 
+console.log('clicked')
+}); 
+
+});
+
+
 function loadTeams(){
   var table = document.getElementById("commands");
   var store = new Store();

@@ -14,9 +14,12 @@
     border: 1px solid#34c84b;
 }
 
+.row_item {
+    margin-top: 5%;
+}
+
 #Settings img {
-    width: 30px;
-    height: 30px;
+    width: 20%;
 }
 
 #Settings {
@@ -27,8 +30,7 @@
 }
 
 #AppName {
-    
-    padding-top: 100px;
+    padding-top: 20%;
     font-size: 48pt;
     font-family: Lobster;
     color: rgb(83, 199, 235);
@@ -46,4 +48,28 @@
 #Teams h3{
     color: rgb(83, 199, 235);
     font-weight: lighter;
+}
+
+.start-game {
+    padding-top:2em;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+.container-fluid {
+    padding-top: 5px;
+}
+.row {
+    padding-top: 2px;
+}
+
+#commandInput {
+    margin-right: 10%;
 }

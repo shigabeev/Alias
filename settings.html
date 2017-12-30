@@ -8,14 +8,16 @@
     <script src="js/global.js"></script>
 </head>
 <body>
-    <h2>Время хода</h2>
+    <h2 class="title">Время хода</h2>
     <form name="setDuration" id="settingsForm">
         <input type="radio" name="duration" value="5"> 5 секунд<br>
         <input type="radio" name="duration" value="30"> 30 секунд<br>
         <input type="radio" name="duration" value="45"> 45 секунд<br>
         <input type="radio" name="duration" value="60"> 60 секунд
     </form>
-    <button onclick="save()">Save</button>
-    <button onclick="window.location.href = 'welcome.html';">Back</button>
+    <div class="buttons">
+        <button onclick="save()">Save</button>
+        <button onclick="window.location.href = 'welcome.html';">Back</button>
+    </div>
 </body>
 </html>

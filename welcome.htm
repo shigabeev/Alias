@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://cluer.ru/static/blog/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/global.css">
+        <link rel="stylesheet" type="text/css" href="css/welcome.css">
+        <meta name="theme-color" content="#41ACCA" />
+        <script src="js/welcome.js"></script>
+        <script src="js/global.js"></script>
+        <style type="text/css">
+        	.btn-circle {
+			  width: 30px;
+			  height: 30px;
+			  text-align: center;
+			  padding: 6px 0;
+			  font-size: 12px;
+			  line-height: 1.428571429;
+			  border-radius: 15px;
+			}
+			.container-fluid {
+				padding-top: 5px;
+			}
+			.row {
+				padding-top: 2px;
+			}
+		</style>
+    </head>
+    <body>
+    <div class="container">
+    	<div class="row">
+    		<div class="col-12 col-md-12">
+    			<h1 id="AppName" style="text-align: center;">Alias!</h1>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-12 col-md-12">
+    			<h3 style="text-align: center;">Команды:</h3>
+    		</div>
+    	</div>
+    	<div class="container-fluid teams">
+	    	
+		    	<div class="row item1">
+		    		<div class="col-10 float-sm-left">
+		    			Kes
+		    		</div>
+		    		<div class="col-2">
+		    		<button type="button" class="btn btn-danger btn-circle float-sm-right">-</button>
+		    		</div>
+		    	</div>
+
+		    	<div class="row item2">
+		    		<div class="col-10 float-sm-left">
+		    			Pit
+		    		</div>
+		    		<div class="col-2">
+		    		<button type="button" class="btn btn-danger btn-circle float-sm-right">-</button>
+		    		</div>
+		    	</div>
+	   
+	    </div>
+
+	    <div class="container-fluid">
+	    	<div class="input-group">
+			  <!-- <span class="input-group-addon" id="basic-addon1">Enter here:</span> -->
+			  <input id="commandInput" type="text" class="form-control" placeholder="Command" aria-describedby="basic-addon1">
+			  <button type="button" class="btn btn-success btn-circle float-sm-right">+</button>
+			</div>
+	    </div>
+	    <div class="row">
+    		<div class="col-12">
+    			<a href="game.html"><h2 style="padding-top:1.3em; text-align: center;">Начать игру</h2></a>	
+    		</div>
+    	</div>
+		    
+    	
+    </div>
+        
+
+        <!-- <div>
+            <h1 id="AppName2">Alias!</h1>
+        </div> -->
+
+        <!--<div id="Teams">
+            <h3>Команды:</h3> 
+            <table align="center" id="commands">
+                <tr>
+                    <td><input id="commandInput"type="text" size="40"></td>
+                    <td class="AddBut" onclick="addTeamEvent()"><button>+</button></td>
+                </tr>
+            </table>
+        </div>-->
+        <div id="Settings">
+            <a href="settings.html"><img src="res/Settings.ico"></a>
+        </div>
+    </body>
+    <script>
+        var store = new Store();
+        store.initStore();
+        loadTeams();
+    </script>
+</html>
